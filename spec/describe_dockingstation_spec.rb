@@ -9,5 +9,13 @@ describe DockingStation do
   end
 #  it { should respond_to(:release_bike)}
 
-end
+  it 'allows docking' do
+    expect(subject).to respond_to(:dock).with(1).argument
+  end
 
+  it 'checks if bike has been docked' do
+    bike = Bike.new
+    expect(subject.dock(bike)).to eq bike
+  end
+
+end
