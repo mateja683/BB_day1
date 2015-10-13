@@ -1,0 +1,2 @@
+describe station do
+end
