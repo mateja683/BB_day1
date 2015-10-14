@@ -2,9 +2,9 @@ require_relative 'bike'
 class DockingStation
   attr_reader :bike
   def release_bike
-    Bike.new
-    #@docked = false
-  end
+    fail "biking station is empty" unless @bike
+    @bike
+    end
 
 
 
